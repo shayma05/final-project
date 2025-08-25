@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Café - Torréfacteur Artisanal depuis 1910</title>
+  <meta name="description" content="Découvrez les meilleurs cafés artisanaux français. Torréfaction traditionnelle, grains sélectionnés et saveurs authentiques depuis plus de 100 ans.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <div class="nav-brand">
+          <div class="logo">M</div>
+          <h1>maison café</h1>
+        </div>
+        
+        <div class="nav-links">
+          <a href="#accueil">Accueil</a>
+          <a href="#nos-cafes">Nos Cafés</a>
+          <a href="#notre-histoire">Notre Histoire</a>
+          <a href="#contact">Contact</a>
+        </div>
+        
+        <div class="nav-actions">
+          <button class="cart-btn" onclick="goToCart()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="m1 1 4 4 12 1-1 12H6"></path>
+            </svg>
+            Panier
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
+        
+        <button class="mobile-menu-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+      <div class="hero-content">
+        <div class="hero-text scroll-reveal">
+          <h1>L'Art du Café<br><span class="accent-text">à la tunisienne</span></h1>
+          <p>Depuis 1910, nous perpétuons la tradition tunisienne de la torréfaction artisanale. Chaque grain est sélectionné avec passion pour vous offrir une expérience gustative d'exception.</p>
+          <button class="btn btn-primary btn-large" onclick="scrollToSection('nos-cafes')">
+            Découvrir nos cafés
+          </button>
+        </div>
+      </div>
+      <div class="hero-image scroll-reveal">
+        <img src="https://lapresse.tn/wp-content/uploads/2023/07/cafe.jpg" alt="Café artisanal tunisien">
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="nos-cafes" class="products-section">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <h2>Découvrez nos cafés</h2>
+          <p>Chaque grain raconte une histoire, chaque tasse révèle une tradition. Nos cafés sont soigneusement sélectionnés et torréfiés pour vous offrir une expérience gustative d'exception.</p>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+          <div class="product-item scroll-reveal">
+            <div class="product-icon">☕</div> <!-- Placeholder icon -->
+            <h3>Cafés filtres</h3>
+            <p>Le Noir, l’Aroma ou le Fifty, des cafés qui offrent un moment de plaisir intense lors de la dégustation.</p>
+          </div>
+          <div class="product-item scroll-reveal">
+            <div class="product-icon">🌿</div> 
+            <h3>Cafés 100% Arabica</h3>
+            <p>Découvrez la meilleure sélection de café 100% faite par les experts BONDIN issu des meilleures origines du monde.</p>
+          </div>
+          <div class="product-item scroll-reveal">
+            <div class="product-icon">🏺</div> >
+            <h3>Cafés turcs</h3>
+            <p>Le café turc classique se distingue par sa torréfaction poussée et sa mouture fine. Le café turc mélangé est quant à lui tempéré par la saveur de l’orge, il est faible en caféine.</p>
+          </div>
+          <div class="product-item scroll-reveal">
+            <div class="product-icon">🌰</div> 
+            <h3>Cafés en grains</h3>
+            <p>BONDIN vous offre la possibilité de moudre vous même votre café, et ainsi déguster un café aromatisé et intense en goût.</p>
+          </div>
+          <div class="product-item scroll-reveal">
+            <div class="product-icon">🍵</div> 
+            <h3>Cafés solubles</h3>
+            <p>Un café facile à préparer, bien adapté pour un petit déjeuner rapide. Découvrez la légèreté et la saveur d’un café 100% Brésilien.</p>
+          </div>
+          <div class="product-item scroll-reveal">
+            <div class="product-icon">💼</div> 
+            <h3>Cafés pour les professionnels</h3>
+            <p>La gamme professionnelle avec des contenances adaptées et une grande variété est aussi disponible pour satisfaire tous les besoins.</p>
+          </div>
+        </div>
+
+        <div class="section-footer scroll-reveal">
+          <button class="btn btn-outline btn-large">Voir tous nos cafés</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="notre-histoire" class="about-section">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text scroll-reveal">
+            <h2>Notre Histoire</h2>
+            <p>La société maison cafés a été fondée en 1910 par Mme shayma. Elle était installée au marché central de Tunis, avant d’être transférée à la rue d’Espagne Tunis, son siège actuel.
+</p>
+            <div class="stats">
+              <div class="stat scroll-reveal" style="--delay: 0.1s;">
+                <span class="stat-number">113</span>
+                <span class="stat-label">Années d'expertise</span>
+              </div>
+              <div class="stat scroll-reveal" style="--delay: 0.2s;">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Origines sélectionnées</span>
+              </div>
+              <div class="stat scroll-reveal" style="--delay: 0.3s;">
+                <span class="stat-number">10k+</span>
+                <span class="stat-label">Clients satisfaits</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-image scroll-reveal">
+            <img src="https://linstant-m.tn/uploads/4a6dc7fc04e1bfd3fff8c83fad80c3503873cc57.jpg" alt="Image historique">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info scroll-reveal">
+            <h2>Contactez-nous</h2>
+            <p>Venez découvrir notre boutique tunisienne ou contactez-nous pour toute question sur nos cafés d'exception.</p>
+            
+            <div class="contact-details">
+              <div class="contact-item scroll-reveal" style="--delay: 0.1s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <div>
+                  <h4>Adresse</h4>
+                  <p>42 Rue du Commerce<br>75015 tunis, tunisie</p>
+                </div>
+              </div>
+              
+              <div class="contact-item scroll-reveal" style="--delay: 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <div>
+                  <h4>Téléphone</h4>
+                  <p>+33 1 42 73 89 65</p>
+                </div>
+              </div>
+              
+              <div class="contact-item scroll-reveal" style="--delay: 0.3s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12,6 12,12 16,14"></polyline>
+                </svg>
+                <div>
+                  <h4>Horaires</h4>
+                  <p>Lun-Sam: 7h30-19h00<br>Dimanche: 8h00-17h00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form scroll-reveal">
+            <form>
+              <input type="text" placeholder="Votre nom" required>
+              <input type="email" placeholder="Votre email" required>
+              <textarea placeholder="Votre message" rows="5" required></textarea>
+              <button type="submit" class="btn btn-primary btn-large">Envoyer le message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer scroll-reveal">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <div class="logo">M</div>
+            <h3>maison café</h3>
+          </div>
+          <p>L'art du café tunisienne depuis 1910. Torréfaction artisanale et passion pour l'excellence.</p>
+        </div>
+        
+      
+        
+        <div class="footer-section">
+          <h4>Service Client</h4>
+          <ul>
+            <li><a href="#">Nous contacter</a></li>
+            <li><a href="#">Livraison</a></li>
+            <li><a href="#">Retours</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Suivez-nous</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Maison Café. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panier - Maison Café</title>
+  <meta name="description" content="Votre panier d'achat - Maison Café. Finalisez votre commande de cafés artisanaux français.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <div class="nav-brand">
+          <div class="logo">M</div>
+          <h1>maison café</h1>
+        </div>
+        
+        <div class="nav-actions">
+          <button class="btn btn-outline" onclick="goHome()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15,18 9,12 15,6"></polyline>
+            </svg>
+            Retour aux cafés
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="cart-main">
+    <div class="container">
+      <!-- Empty Cart State -->
+      <div id="emptyCart" class="empty-cart" style="display: none;">
+        <div class="empty-cart-content">
+          <h1>Votre Panier</h1>
+          <div class="empty-cart-message">
+            <div class="coffee-icon">☕</div>
+            <h2>Votre panier est vide</h2>
+            <p>Découvrez nos délicieux cafés et ajoutez-les à votre panier</p>
+            <button class="btn btn-primary btn-large" onclick="goHome()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15,18 9,12 15,6"></polyline>
+              </svg>
+              Retour aux cafés
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart with Items -->
+      <div id="cartWithItems" class="cart-with-items">
+        <div class="cart-header">
+          <h1 id="cartTitle">Votre Panier</h1>
+          <button class="btn btn-outline" onclick="goHome()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15,18 9,12 15,6"></polyline>
+            </svg>
+            Continuer mes achats
+          </button>
+        </div>
+
+        <div class="cart-content">
+          <div class="cart-items">
+            <div id="cartItemsList">
+              <!-- Cart items will be populated by JavaScript -->
+            </div>
+          </div>
+
+          <div class="cart-summary">
+            <div class="summary-card">
+              <h3>Résumé de commande</h3>
+              
+              <div class="summary-details">
+                <div class="summary-row">
+                  <span id="subtotalLabel">Sous-total</span>
+                  <span id="subtotalAmount">0,00 €</span>
+                </div>
+                <div class="summary-row">
+                  <span>Livraison</span>
+                  <span>Gratuite</span>
+                </div>
+                <div class="summary-row total">
+                  <span>Total</span>
+                  <span id="totalAmount">0,00 €</span>
+                </div>
+              </div>
+
+              <div class="summary-actions">
+                <button class="btn btn-primary btn-large" onclick="proceedToCheckout()">
+                  Procéder au paiement
+                </button>
+                <button class="btn btn-outline btn-large" onclick="clearCart()">
+                  Vider le panier
+                </button>
+              </div>
+
+              <div class="summary-benefits">
+                <p>✓ Livraison gratuite</p>
+                <p>✓ Retour sous 30 jours</p>
+                <p>✓ Satisfaction garantie</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="cart.js"></script>
+</body>
+</html>
